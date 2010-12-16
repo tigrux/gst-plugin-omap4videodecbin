@@ -7,9 +7,9 @@ private class Omap4VideoDecBin : Gst.Bin {
 
     class construct {
         set_details_simple(
-            "Omap4DecBin",
+            "Omap4VideoDecBin",
             "Codec/Decoder/Video",
-            "Bin to enable video decoding and parsing (on demand)",
+            "Bin to enable video parsing and decoding  (on demand)",
             "Sandino Flores <sandino@ti.com>");
 
         Gst.Caps caps = new Gst.Caps.empty();
@@ -118,6 +118,6 @@ public const Gst.PluginDesc gst_plugin_desc = {
     "LGPL",
     "gstomap4videodecbin",
     "GstOmap4VideoDecBin",
-    "<unknown>"
+    "https://github.com/tigrux/gst-plugin-omap4videodecbin"
 };
 

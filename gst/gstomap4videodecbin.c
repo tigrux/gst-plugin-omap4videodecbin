@@ -57,7 +57,7 @@ static void omap4_video_dec_bin_finalize (GObject* obj);
 gboolean plugin_init (GstPlugin* plugin);
 static gboolean _plugin_init_gst_plugin_init_func (GstPlugin* plugin);
 
-const GstPluginDesc gst_plugin_desc = {GST_VERSION_MAJOR, GST_VERSION_MINOR, "omap4videodecbin", "Omap 4 video decoder bin", _plugin_init_gst_plugin_init_func, "0.0.1", "LGPL", "gstomap4videodecbin", "GstOmap4VideoDecBin", "<unknown>"};
+const GstPluginDesc gst_plugin_desc = {GST_VERSION_MAJOR, GST_VERSION_MINOR, "omap4videodecbin", "Omap 4 video decoder bin", _plugin_init_gst_plugin_init_func, "0.0.1", "LGPL", "gstomap4videodecbin", "GstOmap4VideoDecBin", "https://github.com/tigrux/gst-plugin-omap4videodecbin"};
 
 
 static gboolean _omap4_video_dec_bin_sink_pad_setcaps (GstPad* pad, GstCaps* caps) {
@@ -223,7 +223,7 @@ static void omap4_video_dec_bin_base_init (Omap4VideoDecBinClass * klass) {
 		GstCaps* caps;
 		GstPadTemplate* _tmp2_;
 		GstPadTemplate* _tmp3_;
-		gst_element_class_set_details_simple (GST_ELEMENT_CLASS (klass), "Omap4DecBin", "Codec/Decoder/Video", "Bin to enable video decoding and parsing (on demand)", "Sandino Flores <sandino@ti.com>");
+		gst_element_class_set_details_simple (GST_ELEMENT_CLASS (klass), "Omap4VideoDecBin", "Codec/Decoder/Video", "Bin to enable video parsing and decoding  (on demand)", "Sandino Flores <sandino@ti.com>");
 		caps = gst_caps_new_empty ();
 		gst_caps_append_structure (caps, gst_structure_new (OMAP4_VIDEO_DEC_BIN_h264_name, NULL, NULL));
 		gst_caps_append_structure (caps, gst_structure_new (OMAP4_VIDEO_DEC_BIN_mpeg4_name, "mpegversion", G_TYPE_INT, 4, NULL, NULL));
