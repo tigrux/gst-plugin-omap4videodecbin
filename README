@@ -1,0 +1,2 @@
+Gstreamer plugin which contains a GstBin element
+to add parsers and decoders according to the given caps.

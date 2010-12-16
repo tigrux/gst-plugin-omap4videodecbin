@@ -1,0 +1,30 @@
+AC_INIT([gstomap4videodecbin], [0.0.1], [tigrux@gmail.com], [gstomap4videodecbin])
+AC_CONFIG_SRCDIR([Makefile.am])
+AC_CONFIG_HEADERS(config.h)
+AM_INIT_AUTOMAKE([foreign])
+
+AC_PROG_CC
+AC_PROG_LIBTOOL
+AC_DISABLE_STATIC
+
+AC_PATH_PROG(VALAC, valac, valac)
+AC_SUBST(VALAC)
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CPPFLAGS)
+AC_SUBST(LDFLAGS)
+
+VALAFLAGS="--pkg gstreamer-0.10"
+AC_SUBST(VALAFLAGS)
+
+PKG_CHECK_MODULES(GST, gstreamer-0.10)
+AC_SUBST(GST_CFLAGS)
+AC_SUBST(GST_LIBS)
+
+AC_CONFIG_FILES([
+	Makefile
+	gst/Makefile
+	])
+
+AC_OUTPUT
+
